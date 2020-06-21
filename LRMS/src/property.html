@@ -1,0 +1,95 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Asset Registry</title>
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="index.html">Land Record Management</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li><a href="index.html">Create Property</a></li>
+               <li><a href="property.html">View Property</a></li>
+               <li><a href="user.html">Add User</a></li>
+               <li><a href="user Details.html">User Details</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div style="margin-left: 30px" class="container-fluid">
+         <div style="position: relative;" class="row">
+            <div class="col-md-6 offset-md-3">
+               <div class="col-md-6 offset-md-0">
+                  <fieldset><legend>Property Details</legend>
+                  <form action="#" id = "PropSearchform">
+                     <div class="form-group">
+                        <input type="text" class="form-control" id="PropSearch" name="PropSearch" placeholder="Enter Property Id">
+                     </div>
+                  </form></fieldset>
+                  <div style="display: flex;flex-direction: row;">
+                     <button type="submit"  class="btn btn-primary" id="btn-PropSearch"  form="form1" value="Submit">Search Property</button>
+                     <button type="submit"  class="btn btn-primary" id="btn-PropSearchAll" style="margin-left: 10px;"  form="form1" value="Submit">View All</button>
+                  </div>
+               </div>
+               <div class="container">
+
+                  <input style="margin-top: 150px;width: 300px" type="text" name="search" id="search" class="form-control" placeholder="Search by Cnic"/>  
+
+                  <table class="table table-striped" id="PropTable">
+                     
+                  </table>
+               </div>
+               <div>
+                  <div style="float: left; width: 40%; margin-left: 15px;margin-top: 25px" class="sec1">
+                      <!--    <form style="margin-left: 10px" action="#" id ="PropReqChangefor"><div class="form-group"><label>Change Ownership</label><input type="text" class="form-control" id="PropReqChange" name="PropReqChange" placeholder="Enter New Owner Address"></div></form><div style="margin-top: 10px;display: flex;flex-direction: row;justify-content: flex-end;"> <button  type="submit"  class="btn btn-primary" id="btn-PropReqChang"  form="form1" value="Submit">Request</button></div> -->
+                        
+                  </div> 
+                  <div style="float: left; width: 50%;margin-left: 15px;margin-top: 25px" class="sec2">
+                        <!-- <form action="#" id ="PropReqChangefor"><div class="form-group"><input type="text" class="form-control" id="PropReqChange" name="PropReqChange" placeholder="Enter New Owner Address"></div></form><label>Accept Change of Ownership</label><button type="submit"  class="btn btn-primary" id="btn-PropAcptChang" value="Submit">Accept</button> -->
+                        
+                  </div> 
+                  <div style="float: left; width: 30%; margin-left: 15px" class="sec3">
+                       <!--  <form action="#" id="PropValChangeform"><div class="form-group"><label>Change Value/Price</label><input type="text" class="form-control" id="PropValChange" name="PropValChange" placeholder="Enter New Value/Price"></div></form><div style="margin-top: 10px;display: flex;flex-direction: row;justify-content: flex-end;"><button type="submit"  class="btn btn-primary" id="btn-PropValChange"  form="form1" value="Submit">Change</button></div> -->
+                        
+                  </div> 
+                  
+                  
+               </div>
+               <div id="sec5"><h3></h3></div>
+            </div>
+         </div>
+         <input style="margin-top: 20px;width: 300px" type="text" name="search1" id="search1" class="form-control" placeholder="Search by Date" />
+         <table class="table table-striped" id="historyTable">
+
+         </table>
+        
+      </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/web3.min.js"></script>
+      <script src="js/truffle-contract.js"></script>
+      <script src="js/app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.min.js"></script>
+      <script>
+         setTimeout(()=>{
+           document.getElementById("btn-PropSearchAll").click();
+         },100);
+
+      </script>
+   </body>
+</html>

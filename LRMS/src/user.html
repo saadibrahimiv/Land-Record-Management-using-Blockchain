@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+      <title>Asset Registry</title>
+      <link rel="shortcut icon" href="#" />
+      <!-- Bootstrap -->
+      <link href="css/bootstrap.min.css" rel="stylesheet">
+      <style type="text/css">
+
+         #nav-bar a {
+         text-decoration: none;                      
+         color: black;
+         font-family: sans-serif;
+         font-size: 20px;
+         margin: 5px; 
+         }
+         .topic{
+         margin-top:100px ;
+         text-align: center;
+         font-family: sans-serif;
+         padding-top: 20px;
+         }
+         .topic input{
+         background-color: white;
+         border-radius: .25rem;
+         width: 250px;
+         height: 30px;
+         border: 1px solid #ced4da;
+         background-clip: border-box;
+         margin-top: -5px;
+         }
+         .topic button{
+         width: 100px;
+         height: 30px;
+         background-color: green;
+         color: white;
+         padding-top: 5px;
+         margin-top: 10px;
+         border: 1px solid #ced4da;
+         background-clip: border-box;
+         cursor: pointer;
+         }
+         *{
+         font-family: sans-serif;
+         }
+         *,*::before,*::after{
+         box-sizing: border-box;
+         }
+         #loader {
+         width: 10px;
+         display:none;
+         }
+      </style>
+      <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+      <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+      <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <![endif]-->
+   </head>
+   <body>
+      <nav class="navbar navbar-inverse">
+         <div class="container-fluid">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="index.html">Land Record Managemnt</a>
+            </div>
+            <ul class="nav navbar-nav">
+               <li><a href="index.html">Create Property</a></li>
+               <li><a href="property.html">View Property</a></li>
+               <li><a href="user.html">Add User</a></li>
+               <li><a href="user Details.html">User Details</a></li>
+            </ul>
+         </div>
+      </nav>
+      <div class="container-fluid">
+         
+               <div style="float: left; width:40%; margin-left: 50px;margin-top: 25px ">
+                  <fieldset><legend><button style="width: 40%; margin-left: 50px;" id="addUser">User</button><button style="width: 40%;" id="addAdmin">Admin</button></legend>
+                  <form style="width: 100%" action="#" id="adduser">
+                     
+                  </form>
+
+               </fieldset>
+               </div>
+
+               <div style="float: left; width: 40%; margin-left: 150px;margin-top: 31px">
+                  <fieldset><legend>Approve</legend>
+                  <form action="#" id="approve">
+                    
+                  </form></fieldset><br>
+               </div> 
+            </div>
+      </div>
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <!-- Include all compiled plugins (below), or include individual files as needed -->
+      <script src="js/bootstrap.min.js"></script>
+      <script src="js/web3.min.js"></script>
+      <script src="js/truffle-contract.js"></script>
+      <script src="js/app.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/web3@1.2.8/dist/web3.min.js"></script>
+      <script>
+         setTimeout(()=>{
+           document.getElementById("addUser").click();
+         },100);
+
+      </script>
+   </body>
+</html>
